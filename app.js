@@ -1,21 +1,33 @@
 const canvas = document.querySelector("#main-canvas");
 const ctx = canvas.getContext("2d");
 
-// Fill Color - Will Continue for the Rest of Document
-ctx.fillStyle = "green";
+// ** Drawing Paths
+// Triangle
+ctx.beginPath();
+ctx.lineTo(30, 30);
+ctx.lineTo(100, 25);
+ctx.lineTo(100, 50);
+ctx.fill();
 
-/* 
-!! The Grid
-fillRect(x, y, width, height) - Color Filled
-strokeRect(x, y, width, height) - Border Rect
-clearRect(x, y, width, height) - Transparent 
-*/
+// ** Another Path = Square
+ctx.beginPath();
+ctx.lineTo(20, 30);
+ctx.lineTo(20, 40);
+ctx.lineTo(10, 40);
+ctx.lineTo(10, 30);
+ctx.lineTo(20, 30);
+ctx.stroke();
 
-//** */ Three Types of Filling
-ctx.strokeRect(20, 20, 20, 20);
-ctx.fillRect(40, 40, 40, 20);
-ctx.clearRect(5, 5, 5, 5);
+// ** Another Path = Square
+ctx.beginPath();
+ctx.lineTo(40, 50);
+ctx.lineTo(40, 60);
+ctx.lineTo(30, 60);
+ctx.lineTo(30, 50);
+ctx.fill();
 
-//!! Cutting a Square from Inside
-ctx.fillRect(100, 100, 20, 20);
-ctx.clearRect(100, 100, 5, 5);
+// ** Another Path = Line
+ctx.beginPath();
+ctx.moveTo(0, 0);
+ctx.lineTo(10, 50);
+ctx.stroke();

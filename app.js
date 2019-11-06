@@ -1,33 +1,26 @@
-const canvas = document.querySelector("#main-canvas");
-const ctx = canvas.getContext("2d");
+function setup() {
+  createCanvas(400, 400); // Creates Canvas
+  // background("#007bff"); // Sets Background Color
+}
 
-// ** Drawing Paths
-// Triangle
-ctx.beginPath();
-ctx.lineTo(30, 30);
-ctx.lineTo(100, 25);
-ctx.lineTo(100, 50);
-ctx.fill();
+function draw() {
+  let c = color("#333"); // Defines the color
+  stroke(c); // Inits the color
 
-// ** Another Path = Square
-ctx.beginPath();
-ctx.lineTo(20, 30);
-ctx.lineTo(20, 40);
-ctx.lineTo(10, 40);
-ctx.lineTo(10, 30);
-ctx.lineTo(20, 30);
-ctx.stroke();
+  // ** Drawing a Point
+  point(30, 30);
+  // strokeWeight(20);
 
-// ** Another Path = Square
-ctx.beginPath();
-ctx.lineTo(40, 50);
-ctx.lineTo(40, 60);
-ctx.lineTo(30, 60);
-ctx.lineTo(30, 50);
-ctx.fill();
+  // ** Line
+  line(50, 50, 80, 80); // Draws a line
 
-// ** Another Path = Line
-ctx.beginPath();
-ctx.moveTo(0, 0);
-ctx.lineTo(10, 50);
-ctx.stroke();
+  // ** Rectangle
+  rect(30, 20, 40, 25); // x, y, width, height
+  fill(color("#fff")); // Another way to color
+
+  // ** Square
+  square(30, 20, 55);
+
+  // ** Triangle
+  triangle(30, 75, 58, 20, 86, 75);
+}
